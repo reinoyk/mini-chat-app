@@ -25,3 +25,31 @@ CREATE TABLE priv_chat (
     FOREIGN KEY (parties_id) REFERENCES parties(parties_id) ON DELETE CASCADE,
     FOREIGN KEY (message_sender) REFERENCES user(user_id) ON DELETE CASCADE
 );
+
+-- Tabel group
+CREATE TABLE groups (
+    group_id INT AUTO_INCREMENT PRIMARY KEY,
+    group_name VARCHAR(100) NOT NULL,
+    creator_id INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabel anggota group
+CREATE TABLE group_members (
+    member_id INT AUTO_INCREMENT PRIMARY KEY,
+    group_id INT NOT NULL,
+    user_id INT NOT NULL,
+    FOREIGN KEY (group_id) REFERENCES groups(group_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE
+);
+
+-- Tabel pesan group
+CREATE TABLE group_messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    group_id INT NOT NULL,
+    sender_id INT NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    message TEXT NOT NULL,
+    FOREIGN KEY (group_id) REFERENCES groups(group_id) ON DELETE CASCADE,
+    FOREIGN KEY (sender_id) REFERENCES user(user_id) ON DELETE CASCADE
+);

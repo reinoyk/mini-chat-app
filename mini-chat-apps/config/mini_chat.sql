@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2025 at 08:12 PM
+-- Generation Time: Jun 03, 2025 at 04:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -58,9 +58,9 @@ CREATE TABLE `group_members` (
 --
 
 INSERT INTO `group_members` (`member_id`, `group_id`, `user_id`) VALUES
-(1, 1, 2),
-(2, 1, 1),
-(3, 1, 3);
+(3, 1, 3),
+(4, 1, 4),
+(5, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,8 @@ CREATE TABLE `group_messages` (
 INSERT INTO `group_messages` (`message_id`, `group_id`, `sender_id`, `timestamp`, `message`) VALUES
 (1, 1, 2, '2025-06-03 00:49:58', 'halo rek'),
 (2, 1, 3, '2025-06-03 00:50:07', 'halo junaidi'),
-(3, 1, 3, '2025-06-03 00:50:17', 'ini buat pweb kah');
+(3, 1, 3, '2025-06-03 00:50:17', 'ini buat pweb kah'),
+(4, 1, 4, '2025-06-03 17:57:33', 'halo iya aku baru join');
 
 -- --------------------------------------------------------
 
@@ -152,7 +153,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `fullname`, `email`, `address`, `username`, `password`) VALUES
 (1, 'alex ', 'alex@gmail.com', 'Jl. Keputih no 33', 'alex1', '$2y$10$8VsDWONUK8XzT..z7HcJC.uXIXdYAy0d5yyh/zt86IHJaYGq5uiz2'),
 (2, 'junaidi', 'junaidi@gmail.com', 'Jl. Keputih no 55', 'juna', '$2y$10$q185je/jRuGn1yN3gE5BTejBoJExXIi1GOsXohlcK6EwJX4uXCKny'),
-(3, 'saipul bahri', 'saipul24@gmail.com', 'Jl. Keputih no 88', 'saipul123', '$2y$10$BPzA4qdHluGH7oftXhxRJ.uqGmOeuMZB8F4SndWrrI2TFI5eGxgbu');
+(3, 'saipul bahri', 'saipul24@gmail.com', 'Jl. Keputih no 88', 'saipul123', '$2y$10$BPzA4qdHluGH7oftXhxRJ.uqGmOeuMZB8F4SndWrrI2TFI5eGxgbu'),
+(4, 'Cikal Bakal', 'cikkydikky@gmail.com', 'Jl. Sundardo no 45', 'cikal', '$2y$10$/joS1wJmidOw9jZK3Q0FXucFfM.MBFe3/HvI2579WFzqxml3fCGaK');
 
 --
 -- Indexes for dumped tables
@@ -217,13 +219,13 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `group_members`
 --
 ALTER TABLE `group_members`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `group_messages`
 --
 ALTER TABLE `group_messages`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `parties`
@@ -241,7 +243,7 @@ ALTER TABLE `priv_chat`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

@@ -24,17 +24,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Register - Mini Chat</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-    <h2>Register</h2>
-    <?php if($error) echo "<p style='color:red'>$error</p>"; ?>
+<body class="center-container">
     <form method="POST">
-        <input type="text" name="fullname" placeholder="Full Name" required /><br>
-        <input type="email" name="email" placeholder="Email" required /><br>
-        <input type="text" name="address" placeholder="Address" required /><br>
-        <input type="text" name="username" placeholder="Username" required /><br>
-        <input type="password" name="password" placeholder="Password" required /><br>
+        <h2>Register</h2>
+        <?php if($error) echo "<div class='error-message'>$error</div>"; ?>
+        <input type="text" name="fullname" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="address" placeholder="Address" required />
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Register</button>
+        <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
     </form>
-    <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
 </body>
 </html>

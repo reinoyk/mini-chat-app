@@ -25,14 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login - Mini Chat</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-    <h2>Login</h2>
-    <?php if($error) echo "<p style='color:red'>$error</p>"; ?>
+<body class="center-container">
     <form method="POST">
-        <input type="text" name="username" placeholder="Username" required /><br>
-        <input type="password" name="password" placeholder="Password" required /><br>
+        <h2>Login</h2>
+        <?php if($error) echo "<div class='error-message'>$error</div>"; ?>
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Login</button>
+        <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
     </form>
-    <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
 </body>
 </html>
