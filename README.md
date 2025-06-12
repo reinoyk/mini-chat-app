@@ -106,8 +106,7 @@ This project requires the following dependencies:
 Build mini-chat-app from the source and install dependencies:
 
 **Clone the repository:**
-
-    ```sh
-    ❯ git clone https://github.com/reinoyk/mini-chat-app
-    ```
+```
+git clone https://github.com/reinoyk/mini-chat-app
+```
 
